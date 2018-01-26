@@ -500,6 +500,29 @@
   },
   {
     "date": {
+      "day": "30",
+      "month": "9",
+      "year": "2016"
+    },
+    "title": "Dialog civilizací na Rhodosu",
+    "highlight": "Zeman se zúčastnil konference na ostrově Rhodos pořádané Putinovým spojencem a bývalým agentem komunistické KGB Vladimirem Jakuninem.",
+    "addition": "Na  pohřeb světového státníka Šimona Perese, bývalého izraelského prezidenta, Miloš Zeman nepřiletěl. Přitom je pověstný svou mnoho let trvající, na odiv stavěnou náklonností vůči Izraeli. Během pohřbu vystoupil na konferenci Dialog civilizací, kterou na Rhodosu pořádá Vladimir Jakunin, ruský oligarcha a blízký spolupracovník Vladimira Putina.",
+    "image": "",
+    "links": [
+      {
+        "title": "Zeman znovu vyrazí na Rhodos na konferenci pořádanou ruským oligarchou",
+        "url": "https://zpravy.idnes.cz/milos-zeman-konference-rhodos-vladimir-jakunin-dialog-civilizaci-jiri-ovcacek-1y0-/domaci.aspx?c=A160809_161128_domaci_fer"
+      },
+      {
+        "title": "Na Rhodosu je Zeman hvězda. Na pohřbu Perese by byl jen jedním ze tří tisíc smutečních hostů",
+        "url": "https://nazory.aktualne.cz/komentare/na-rhodosu-je-zeman-hvezda/r~f6deef6686f611e68afb002590604f2e/"
+      }
+    ],
+    "tags": [],
+    "flags": []
+  },
+  {
+    "date": {
       "day": "13",
       "month": "10",
       "year": "2016"
@@ -721,6 +744,29 @@
       {
         "title": "Aktuálně.cz - Královna proti Zemanově lavině neměla šanci, ale majestát to zvládl, hodnotí audienci znalci etikety",
         "url": "https://zpravy.aktualne.cz/domaci/zeman-mlel-pate-pres-devate-kralovna-proti-jeho-lavine-nemel/r~60890cd254db11e7b0440025900fea04/"
+      }
+    ],
+    "tags": [],
+    "flags": []
+  },
+  {
+    "date": {
+      "day": "",
+      "month": "7",
+      "year": "2017"
+    },
+    "title": "Lesní správy Lány",
+    "highlight": "V příspěvkové organizací kanceláře prezidenta zasahovala policie.",
+    "addition": "Dva z trojice lidí zadržených v souvislosti se zadáváním veřejných zakázek Lesní správy Lány byli obviněni. Lesní správa Lány se podle svého webu stará o téměř 5800 hektarů pozemků, které patří České republice. Drtivou většinu tvoří lesy, součástí je také známá Lánská obora.",
+    "image": "",
+    "links": [
+      {
+        "title": "Policie po zásahu v Lánech obvinila dva lidi. Do vazby nikdo nepůjde",
+        "url": "http://www.ceskatelevize.cz/ct24/domaci/2159523-policie-po-zasahu-v-lanech-obvinila-dva-lidi-do-vazby-nikdo-nepujde"
+      },
+      {
+        "title": "Policie obvinila dva lidi z Lesní správy Lány, kvůli veřejným zakázkám",
+        "url": "http://zpravy.e15.cz/domaci/udalosti/policie-obvinila-dva-lidi-z-lesni-spravy-lany-kvuli-verejnym-zakazkam-1334032"
       }
     ],
     "tags": [],
