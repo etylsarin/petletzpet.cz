@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:200,400,500);
 * {
   border: 0;
@@ -85,18 +86,37 @@ div.header {
       color: white; }
       div.header h2 a:hover, div.header h2 a:focus {
         text-decoration: underline; }
+  div.header .clip-svg {
+    width: 0;
+    height: 0; }
+  div.header .foto-wrap {
+    display: inline-block;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    -webkit-clip-path: url("#polygon-clip-hexagon");
+    clip-path: url("#polygon-clip-hexagon");
+    background: rgba(255, 255, 255, 0.85);
+    width: 156px;
+    height: 166px;
+    margin-right: 5em; }
   div.header .foto {
-    border-radius: 50%;
-    display: block;
-    overflow: hidden;
+    position: relative;
+    left: 3px;
+    top: 3px;
     width: 150px;
-    height: 150px;
-    border: 2px solid rgba(255, 255, 255, 0.85);
-    margin: 0 auto 1em; }
+    height: 160px;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    -webkit-clip-path: url("#polygon-clip-hexagon");
+    clip-path: url("#polygon-clip-hexagon"); }
     div.header .foto img {
       position: relative;
       left: -30px;
       height: 100%; }
+
+.title {
+  display: inline-block;
+  vertical-align: top; }
 
 div.item {
   display: -webkit-box;
@@ -124,8 +144,10 @@ div.item {
   div.item #timeline .highlight, div.item #timeline .addition {
     line-height: 1.5em; }
   div.item #timeline .highlight::after {
-    content: '...';
-    display: block; }
+    content: 'číst více...';
+    display: block;
+    font-size: 0.85em;
+    color: #50585f; }
   div.item #timeline .addition {
     display: none;
     margin-top: 1em;
