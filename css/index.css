@@ -82,6 +82,9 @@ div.header {
     color: rgba(255, 255, 255, 0.75);
     max-width: 30rem;
     margin: auto; }
+    @media only screen and (max-device-width: 640px) {
+      div.header h2 .hide-xs {
+        display: none; } }
     div.header h2 a {
       color: white; }
       div.header h2 a:hover, div.header h2 a:focus {
@@ -99,6 +102,9 @@ div.header {
     width: 156px;
     height: 166px;
     margin-right: 5em; }
+    @media only screen and (max-device-width: 640px) {
+      div.header .foto-wrap {
+        display: none; } }
   div.header .foto {
     position: relative;
     left: 3px;
