@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/index.css" />
+  <title></title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="foto" class="foto">
+        <img src="img/milos-zeman-alkohol.jpg" />
+      </span>
+      <h1>Miloš Zeman: Pět let v roli prezidenta</h1>
+      <h2>Čeho všeho jsme byli svědky za posledních 5 let úřadování Miloše Zemana na hradě? A jak to vlastně dopadlo s jeho <a href="https://extra.demagog.cz/sliby-milose-zemana/">předvolebními sliby</a>?</h2>
+    </div>
+    <div class="item">
+      <div id="timeline">
+        <div id="root">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script id="timeline-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <section class="year">
+      <h3>{{@key}}</h3>
+      {{#each this}}
+      <section>
+        <h4>{{@key}}</h4>
+        <ul>
+          {{#each this}}
+          <li class="article">
+            <h5 class="title">{{title}}</h5>
+            <p class="highlight">{{highlight}}</p>
+            <div class="addition">
+              <p>{{addition}}</p>
+              <ul>
+                {{#each links}}
+                <li>
+                  <a href="{{url}}">{{title}}</a>
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </section>
+      {{/each}}
+    </section>
+    {{/each}}
+  </script>
+  <script src="js/index.bundle.js" /></script>
+</body>
+</html>
