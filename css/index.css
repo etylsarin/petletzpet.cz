@@ -48,6 +48,10 @@ div.header {
   color: white;
   padding: 1.5rem 1rem 2.5rem 1rem;
   position: relative; }
+  @media only screen and (max-device-width: 640px) {
+    div.header {
+      padding-top: 0;
+      padding-bottom: 1em; } }
   div.header:after {
     content: '';
     position: absolute;
@@ -71,6 +75,10 @@ div.header {
     font-size: 1.6em;
     letter-spacing: 0.1rem;
     text-transform: uppercase; }
+    @media only screen and (max-device-width: 640px) {
+      div.header h1 {
+        font-size: 1.3em;
+        margin-top: 0; } }
     @media (min-width: 62em) {
       div.header h1 {
         font-size: 1.9em;
@@ -82,6 +90,9 @@ div.header {
     color: rgba(255, 255, 255, 0.75);
     max-width: 30rem;
     margin: auto; }
+    @media only screen and (max-device-width: 640px) {
+      div.header h2 {
+        font-size: 1em; } }
     @media only screen and (max-device-width: 640px) {
       div.header h2 .hide-xs {
         display: none; } }
