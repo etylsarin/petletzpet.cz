@@ -55,7 +55,7 @@ div.header {
   div.header:after {
     content: '';
     position: absolute;
-    bottom: -5rem;
+    bottom: -5.1rem;
     left: 0rem;
     height: 5.1rem;
     display: block;
@@ -93,43 +93,56 @@ div.header {
     @media only screen and (max-device-width: 640px) {
       div.header h2 {
         font-size: 1em; } }
-    @media only screen and (max-device-width: 640px) {
-      div.header h2 .hide-xs {
-        display: none; } }
-    div.header h2 a {
+  @media only screen and (max-device-width: 640px) {
+    div.header .hide-xs {
+      display: none; } }
+  div.header p {
+    padding-top: 0.3em;
+    color: rgba(255, 255, 255, 0.75); }
+    div.header p a {
       color: white; }
-      div.header h2 a:hover, div.header h2 a:focus {
+      div.header p a:hover, div.header p a:focus {
         text-decoration: underline; }
   div.header .clip-svg {
     width: 0;
     height: 0; }
   div.header .foto-wrap {
     display: inline-block;
-    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    -webkit-clip-path: url("#polygon-clip-hexagon");
-    clip-path: url("#polygon-clip-hexagon");
     background: rgba(255, 255, 255, 0.85);
     width: 156px;
-    height: 166px;
-    margin-right: 5em; }
-    @media only screen and (max-device-width: 640px) {
-      div.header .foto-wrap {
-        display: none; } }
+    height: 156px;
+    margin-right: 4em;
+    border-radius: 50%; }
   div.header .foto {
     position: relative;
     left: 3px;
     top: 3px;
     width: 150px;
-    height: 160px;
-    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    -webkit-clip-path: url("#polygon-clip-hexagon");
-    clip-path: url("#polygon-clip-hexagon"); }
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden; }
     div.header .foto img {
       position: relative;
       left: -30px;
       height: 100%; }
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    div.header .foto-wrap {
+      -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      -webkit-clip-path: url("#polygon-clip-hexagon");
+      clip-path: url("#polygon-clip-hexagon");
+      border-radius: 0;
+      height: 166px; }
+    div.header .foto {
+      -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      -webkit-clip-path: url("#polygon-clip-hexagon");
+      clip-path: url("#polygon-clip-hexagon");
+      border-radius: 0;
+      height: 160px; } }
+  @media only screen and (max-device-width: 640px) {
+    div.header .foto-wrap {
+      display: none !important; } }
 
 .title {
   display: inline-block;
