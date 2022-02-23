@@ -6,11 +6,48 @@ module.exports = {
     siteUrl: "https://www.petletzpet.cz/",
   },
   plugins: [
-    "gatsby-plugin-sass",
-    "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-react-helmet",
+    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-svgr',
+      options: {
+        svgo: false,
+        ref: true,
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `./src/images/`,
+      },
+      __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: `./src/pages/`,
+      },
+      __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: `./src/posts/`,
+      },
+      __key: "posts",
+    },
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: require.resolve(`@nrwl/gatsby/plugins/nx-gatsby-ext-plugin`),
+      options: {
+        path: __dirname,
+      },
+    },
+    `gatsby-plugin-sharp`,
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
@@ -23,14 +60,14 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-mdx",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: "gatsby-plugin-mdx",
       options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
+        defaultLayouts: {
+          posts: require.resolve("./src/components/post-layout.tsx"),
+          default: require.resolve("./src/components/page-layout.tsx")
+        }
+      }
     },
   ],
 }

@@ -1,0 +1,32 @@
+.section {
+  > h1 {
+    position: sticky;
+    top: 60px;
+    margin: 0;
+    color: darkgrey;
+  }
+
+  > ul {
+    margin-top: 0;
+    padding-left: 100px;
+
+    > li {
+      margin-bottom: 3em;
+
+      > p {
+        margin: -1.4em 0 1em;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: darkgrey;
+      }
+    }
+
+    &,
+    > li > ul {
+      list-style: none;
+    }
+
+    > li > ul {
+      padding: 0;
+    }
+  }
+}
