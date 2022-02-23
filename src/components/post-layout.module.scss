@@ -3,20 +3,29 @@
     position: sticky;
     top: 60px;
     margin: 0;
-    color: darkgrey;
+    color: dimgray;
   }
 
   > ul {
-    margin-top: 0;
-    padding-left: 100px;
+    margin: 0 0 0 70px;
+    padding-left: 30px;
+    border-left: 2px solid gainsboro;
 
     > li {
-      margin-bottom: 3em;
+      padding-bottom: 5em;
 
       > p {
         margin: -1.4em 0 1em;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color: darkgrey;
+        color: dimgray;
+
+        &::after {
+          content: "";
+          display: block;
+          height: 2px;
+          background: gainsboro;
+          flex-grow: 1;
+        }
       }
     }
 
@@ -27,6 +36,19 @@
 
     > li > ul {
       padding: 0;
+
+      > li > h2::before {
+        content: "";
+        display: inline-block;
+        position: relative;
+        width: 12px;
+        height: 12px;
+        background: gainsboro;
+        left: -37px;
+        top: -4px;
+        border: 1px solid white;
+        border-radius: 50%;
+      }
     }
   }
 }

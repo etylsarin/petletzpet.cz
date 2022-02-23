@@ -52,7 +52,6 @@ h2 {
 }
 
 .page {
-  padding-bottom: 64px;
   padding-top: 44px;
 }
 
@@ -71,13 +70,29 @@ h2 {
     margin-bottom: 2em;
   }
 
+  > h2 {
+    padding-bottom: 40px;
+  }
+
   > h1 {
-    font-size: 44px;
+    font-size: 42px;
     line-height: 1.2;
   }
 
   > h2 {
     color: #000;
+  }
+}
+
+.footer {
+  padding-top: 64px;
+  padding-bottom: 16px;
+
+  > small {
+    display: block;
+    text-align: center;
+    max-width: 880px;
+    margin: 0 auto;
   }
 }
 

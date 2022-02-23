@@ -62,6 +62,11 @@ const Layout = ({ children }) => (
       <main className={clasNames(styles.main, 'zeman')}>
         {children}
       </main>
+      <footer className={styles.footer}>
+        <small>
+          podporujeme: <a href="https://www.nasdilejneztozakazou.cz/">Sdílejte, než to zakážou! pravá tvář Andreje Babiše</a> a <a href="https://www.volby-kscm.cz/">Komunisti z kola ven</a>
+        </small>
+      </footer>
     </div>
   </>
 );
