@@ -7,7 +7,7 @@ import * as styles from "./page-layout.module.scss";
 const TITLE = 'Pět let zpět | Největší přešlapy současného prezidenta na časové ose';
 const DESC = 'Čeho všeho jsme byli svědky za posledních 5 let úřadování českého prezidenta na hradě? Nabízíme přehled novinových zpráv s největšími přešlapy na časové ose.';
 
-const Layout = ({ children }) => (
+export const PageLayout = ({ children }) => (
   <>
     <Helmet
       title={TITLE}
@@ -71,4 +71,4 @@ const Layout = ({ children }) => (
   </>
 );
 
-export default Layout;
+export default PageLayout;
