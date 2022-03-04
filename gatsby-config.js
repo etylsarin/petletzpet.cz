@@ -1,11 +1,27 @@
+const pkg = require('./package.json');
+const DESC = `Čeho všeho jsme byli svědky za posledních 5 let úřadování českého prezidenta na hradě? Nabízíme přehled novinových zpráv s největšími přešlapy na časové ose.`;
+
 module.exports = {
   siteMetadata: {
-    title: "Miloš Zeman: pět let zpět",
-    description: "Největší přešlapy současného prezidenta na časové ose.",
-    author: "@etylsarin",
-    siteUrl: "https://www.petletzpet.cz/",
+    title: pkg.description,
+    description: DESC,
+    author: pkg.author,
+    siteUrl: pkg.homepage,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: pkg.description,
+        short_name: pkg.name,
+        description: DESC,
+        start_url: `/`,
+        background_color: `#fbfbfb`,
+        theme_color: `#fbfbfb`,
+        display: `standalone`,
+        icon: "src/images/icon.png",
+      },
+    },
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-svgr',
@@ -48,26 +64,43 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`,
-    {
-      resolve: "gatsby-plugin-sitemap",
-      options: {
-        excludes: ["/chapter-*"],
-      },
-    },
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/icon.png",
-      },
-    },
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-mdx",
       options: {
         defaultLayouts: {
           posts: require.resolve("./src/components/post-layout.tsx"),
           default: require.resolve("./src/components/page-layout.tsx")
-        }
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 550,
+            }
+          },
+        ],
+        rehypePlugins: [
+          {
+            resolve: 'rehype-slug'
+          }
+        ]
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          'G-1DTH85EV1J'
+        ],
+        gtagConfig: {
+          anonymize_ip: true,
+        },
+        pluginConfig: {
+          head: false,
+        },
+      },
     },
   ],
 }
