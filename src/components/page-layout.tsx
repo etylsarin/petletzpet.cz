@@ -1,12 +1,14 @@
-import * as React from "react";
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
-import clasNames from "classnames";
+import * as React from "react"
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
+import clasNames from "classnames"
 
-import * as styles from "./page-layout.module.scss";
+import * as styles from "./page-layout.module.scss"
 
 export const PageLayout = ({ children }) => {
-  const { site: { siteMetadata }} = useStaticQuery(graphql`
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
@@ -15,14 +17,14 @@ export const PageLayout = ({ children }) => {
         }
       }
     }
-  `);
-  const TITLE = `${siteMetadata.title} | Největší přešlapy současného prezidenta na časové ose`;
-  const DESC = siteMetadata.description;  
+  `)
+  const TITLE = `${siteMetadata.title} | Největší přešlapy současného prezidenta na časové ose`
+  const DESC = siteMetadata.description
 
   return (
     <>
       <Helmet
-        htmlAttributes={{ lang: 'en' }}
+        htmlAttributes={{ lang: "en" }}
         title={TITLE}
         meta={[
           {
@@ -59,17 +61,19 @@ export const PageLayout = ({ children }) => {
         <header className={styles.header}>
           <h1>{TITLE}</h1>
         </header>
-        <main className={clasNames(styles.main, 'zeman')}>
-          {children}
-        </main>
+        <main className={clasNames(styles.main, "zeman")}>{children}</main>
         <footer className={styles.footer}>
           <small>
-            podporujeme: <a href="https://www.nasdilejneztozakazou.cz/">Sdílejte, než to zakážou! pravá tvář Andreje Babiše</a> a <a href="https://www.volby-kscm.cz/">Komunisti z kola ven</a>
+            podporujeme:{" "}
+            <a href="https://www.nasdilejneztozakazou.cz/">
+              Sdílejte, než to zakážou! pravá tvář Andreje Babiše
+            </a>{" "}
+            a <a href="https://www.volby-kscm.cz/">Komunisti z kola ven</a>
           </small>
         </footer>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default PageLayout;
+export default PageLayout

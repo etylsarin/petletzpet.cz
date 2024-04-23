@@ -1,5 +1,5 @@
-const pkg = require('./package.json');
-const DESC = `Čeho všeho jsme byli svědky za posledních 5 let úřadování českého prezidenta na hradě? Nabízíme přehled novinových zpráv s největšími přešlapy na časové ose.`;
+const pkg = require("./package.json")
+const DESC = `Čeho všeho jsme byli svědky za posledních 5 let úřadování českého prezidenta na hradě? Nabízíme přehled novinových zpráv s největšími přešlapy na časové ose.`
 
 module.exports = {
   siteMetadata: {
@@ -22,9 +22,9 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    'gatsby-plugin-sass',
+    "gatsby-plugin-sass",
     {
-      resolve: 'gatsby-plugin-svgr',
+      resolve: "gatsby-plugin-svgr",
       options: {
         svgo: false,
         ref: true,
@@ -57,43 +57,26 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: require.resolve(`@nrwl/gatsby/plugins/nx-gatsby-ext-plugin`),
-      options: {
-        path: __dirname,
-      },
-    },
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-mdx",
       options: {
-        defaultLayouts: {
-          posts: require.resolve("./src/components/post-layout.tsx"),
-          default: require.resolve("./src/components/page-layout.tsx")
-        },
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 550,
-            }
+            },
           },
         ],
-        rehypePlugins: [
-          {
-            resolve: 'rehype-slug'
-          }
-        ]
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [
-          'G-1DTH85EV1J'
-        ],
+        trackingIds: ["G-1DTH85EV1J"],
         gtagConfig: {
           anonymize_ip: true,
         },

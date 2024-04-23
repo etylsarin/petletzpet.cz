@@ -9,22 +9,15 @@ import Zeman2020 from "./zeman/2020.mdx"
 import Zeman2021 from "./zeman/2021.mdx"
 import Zeman2022 from "./zeman/2022.mdx"
 
-<Zeman2013 />
-
-<Zeman2014 />
-
-<Zeman2015 />
-
-<Zeman2016 />
-
-<Zeman2017 />
-
-<Zeman2018 />
-
-<Zeman2019 />
-
-<Zeman2020 />
-
-<Zeman2021 />
-
-<Zeman2022 />
+export const posts = [
+  Zeman2013,
+  Zeman2014,
+  Zeman2015,
+  Zeman2016,
+  Zeman2017,
+  Zeman2018,
+  Zeman2019,
+  Zeman2020,
+  Zeman2021,
+  Zeman2022,
+]
