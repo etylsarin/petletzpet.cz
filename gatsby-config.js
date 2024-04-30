@@ -50,10 +50,10 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "posts",
-        path: `./src/posts/`,
+        name: "sections",
+        path: `./src/sections/`,
       },
-      __key: "posts",
+      __key: "sections",
     },
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
