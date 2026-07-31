@@ -1,5 +1,5 @@
 const pkg = require("./package.json")
-const DESC = `Čeho všeho jsme byli svědky za posledních 5 let úřadování českého prezidenta na hradě? Nabízíme přehled novinových zpráv s největšími přešlapy na časové ose.`
+const DESC = `Čeho všeho jsme byli svědky za 10 let úřadování Miloše Zemana na hradě? Nabízíme přehled novinových zpráv s největšími přešlapy na časové ose.`
 
 module.exports = {
   siteMetadata: {

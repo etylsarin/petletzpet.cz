@@ -8,6 +8,7 @@ import Year2019 from "./2019.mdx"
 import Year2020 from "./2020.mdx"
 import Year2021 from "./2021.mdx"
 import Year2022 from "./2022.mdx"
+import Year2023 from "./2023.mdx"
 
 export const sections = [
   Year2013,
@@ -20,4 +21,5 @@ export const sections = [
   Year2020,
   Year2021,
   Year2022,
+  Year2023,
 ]

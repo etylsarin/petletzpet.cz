@@ -3,7 +3,7 @@ import * as styles from "./section-layout.module.scss"
 
 export const SectionLayout = ({ sections }) => (
   <>
-    {sections.map((Item, index) => (
+    {[...sections].reverse().map((Item, index) => (
       <section className={styles.section} key={index}>
         <Item />
       </section>

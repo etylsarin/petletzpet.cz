@@ -18,13 +18,13 @@ export const PageLayout = ({ children }) => {
       }
     }
   `)
-  const TITLE = `${siteMetadata.title} | Největší přešlapy současného prezidenta na časové ose`
+  const TITLE = `${siteMetadata.title} | Největší přešlapy bývalého prezidenta na časové ose`
   const DESC = siteMetadata.description
 
   return (
     <>
       <Helmet
-        htmlAttributes={{ lang: "en" }}
+        htmlAttributes={{ lang: "cs" }}
         title={TITLE}
         meta={[
           {
@@ -68,7 +68,7 @@ export const PageLayout = ({ children }) => {
             <a href="https://www.nasdilejneztozakazou.cz/">
               Sdílejte, než to zakážou! pravá tvář Andreje Babiše
             </a>{" "}
-            a <a href="https://www.volby-kscm.cz/">Komunisti z kola ven</a>
+            a <a href="https://www.volby-kscm.cz/">Komunisty nikdy víc</a>
           </small>
         </footer>
       </div>
