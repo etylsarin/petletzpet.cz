@@ -22,12 +22,14 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 900;
 }
 
-.header > h1,
+.header .brand,
+.header .brand a,
 .main > h1,
 .main > h2 {
   color: #fff;
@@ -42,12 +44,18 @@ h2 {
   top: 0;
   z-index: 2;
 
-  > h1 {
+  .brand {
     max-width: 880px;
     margin: 0 auto;
     padding: 0 40px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 900;
     font-size: 17px;
     text-transform: uppercase;
+
+    a {
+      text-decoration: none;
+    }
   }
 }
 

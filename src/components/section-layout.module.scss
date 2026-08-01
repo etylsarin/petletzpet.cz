@@ -1,8 +1,10 @@
 .section {
-  > h1 {
+  // keep the browser's h1 metrics now that the year heading is an h2
+  > h2 {
     position: sticky;
     top: 60px;
     margin: 0;
+    font-size: 2em;
     color: dimgray;
   }
 
@@ -37,7 +39,14 @@
     > li > ul {
       padding: 0;
 
-      > li > h2::before {
+      // keep the browser's h2 metrics now that the event titles are h3s
+      // nested under the year heading
+      > li > h3 {
+        font-size: 1.5em;
+        margin: 0.83em 0;
+      }
+
+      > li > h3::before {
         content: "";
         display: inline-block;
         position: relative;
