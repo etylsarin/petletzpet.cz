@@ -1,0 +1,65 @@
+.lead {
+  font-size: 1.1em;
+  margin: 0 0 1.5em;
+}
+
+// Same grey line with dots as the homepage timeline.
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 30px;
+  border-left: 2px solid var(--line);
+
+  li {
+    position: relative;
+    padding-bottom: 1.8em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -38px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      background: var(--line);
+      border: 1px solid #fff;
+      border-radius: 50%;
+    }
+  }
+
+  time {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--muted);
+  }
+
+  h2 {
+    font-size: 24px;
+    margin: 0.1em 0 0.3em;
+
+    a {
+      color: var(--heading);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.other {
+  margin-top: 40px;
+  padding-top: 14px;
+  border-top: 4px solid var(--crimson);
+
+  h2 {
+    font-size: 24px;
+    margin: 0 0 14px;
+  }
+}

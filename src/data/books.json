@@ -1,0 +1,30 @@
+[
+  {
+    "id": "rudy-zeman",
+    "title": "Rudý Zeman",
+    "subtitle": null,
+    "authors": ["Jaroslav Kmenta"],
+    "year": 2019,
+    "publisher": "JKM – Jaroslav Kmenta",
+    "format": "kniha",
+    "pages": 470,
+    "isbn": "978-80-87569-35-1",
+    "url": "https://www.knihydobrovsky.cz/kniha/rudy-zeman-195058155",
+    "description": "Investigativní portrét Miloše Zemana od autora Boss Babiše. Jaroslav Kmenta pátrá po tom, kdo financoval Zemanovy předvolební kampaně, přináší nové informace o lidech z prezidentova nejbližšího okolí a rozebírá, komu a proč se Zeman mstí. Kniha vyšla v polovině Zemanova druhého mandátu a zachycuje politickou atmosféru, v níž jde o vliv, moc, peníze i geopolitické zájmy.",
+    "topics": []
+  },
+  {
+    "id": "zemanovo-finale",
+    "title": "Zemanovo finále",
+    "subtitle": null,
+    "authors": ["Zdislava Pokorná"],
+    "year": 2023,
+    "publisher": "N media",
+    "format": "kniha",
+    "pages": 304,
+    "isbn": "978-80-88433-36-1",
+    "url": "https://www.knihydobrovsky.cz/kniha/zemanovo-finale-598317981",
+    "description": "Reportérka Deníku N Zdislava Pokorná popisuje konec Zemanova prezidentství: jak si poradce Martin Nejedlý a kancléř Vratislav Mynář udělali ze sídla prezidentů středobod svého byznysu, co se kolem prezidentových mužů dělo v posledních letech mandátu a jak Miloš Zeman nakonec zůstal sám.",
+    "topics": []
+  }
+]
