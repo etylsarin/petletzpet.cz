@@ -1,5 +1,6 @@
 const pkg = require("./package.json")
-const DESC = `Čeho všeho jsme byli svědky za 10 let úřadování Miloše Zemana na hradě? Nabízíme přehled novinových zpráv s největšími přešlapy na časové ose.`
+const DESC =
+  "Přešlapy Miloše Zemana v roli prezidenta 2013–2023 na časové ose: milosti, Čína a Rusko, spory o ústavu, Mynář a Nejedlý. U každého přešlapu jsou zdroje."
 
 module.exports = {
   siteMetadata: {
@@ -12,12 +13,13 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: pkg.description,
-        short_name: pkg.name,
+        name: `${pkg.description} | Přešlapy Miloše Zemana`,
+        short_name: pkg.description,
         description: DESC,
+        lang: "cs",
         start_url: `/`,
         background_color: `#fbfbfb`,
-        theme_color: `#fbfbfb`,
+        theme_color: `#dc143c`,
         display: `standalone`,
         icon: "src/images/icon.png",
       },
@@ -30,7 +32,6 @@ module.exports = {
         ref: true,
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -50,15 +51,38 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "sections",
-        path: `./src/sections/`,
+        name: "preslapy",
+        path: `./src/preslapy/`,
       },
-      __key: "sections",
+      __key: "preslapy",
     },
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        // Build artifacts that must not be advertised to crawlers.
+        excludes: ["/404/", "/404.html", "/offline-plugin-app-shell-fallback/"],
+        query: `
+          {
+            allSitePage {
+              nodes {
+                path
+                pageContext
+              }
+            }
+          }
+        `,
+        resolveSiteUrl: () => pkg.homepage.replace(/\/$/, ""),
+        // Event pages carry their `updated` date in the page context (see
+        // gatsby-node.js), which gives Google a real lastmod to work with.
+        serialize: ({ path, pageContext }) => ({
+          url: path,
+          ...(pageContext?.updated ? { lastmod: pageContext.updated } : {}),
+        }),
+      },
+    },
     `gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-mdx",

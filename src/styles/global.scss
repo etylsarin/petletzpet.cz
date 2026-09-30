@@ -1,0 +1,223 @@
+// The site's look: crimson bar, Georgia body text, heavy Helvetica headings
+// and the grey timeline line with dots.
+:root {
+  --crimson: crimson;
+  --ink: #333;
+  --heading: #222;
+  --muted: dimgray;
+  --line: gainsboro;
+  --soft: #f6f6f6;
+  --paper: #fff;
+  --max: 880px;
+  --gutter: 40px;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  // Anchor jumps must clear the fixed header.
+  scroll-padding-top: 64px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--sans);
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--heading);
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 3px solid var(--crimson);
+  outline-offset: 2px;
+}
+
+cite {
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+// The Zeman photo fading into black behind every page's heading, as on the
+// original single-page site. The block grows with its content and stays black
+// below the fade, so long titles remain readable.
+.hero {
+  padding: 270px 0 28px;
+  margin-bottom: 40px;
+  background:
+    linear-gradient(180deg, transparent 100px, #000 360px) left top / 100% 100%
+      no-repeat,
+    url("../images/president-milos-zeman.jpeg") center -100px / 1680px auto no-repeat,
+    #000;
+}
+
+// Page heading on the dark part of the header photo.
+.hero-title {
+  color: #fff;
+  font-size: 42px;
+  margin: 0 0 0.6em;
+}
+
+.kicker {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ddd;
+  margin: 0 0 0.8em;
+
+  a {
+    color: inherit;
+  }
+}
+
+// Long-form text of event pages and the about page.
+.prose {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > p:first-child {
+    font-size: 1.12em;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin: 1.6em 0 0.5em;
+  }
+
+  h3 {
+    font-size: 22px;
+    margin: 1.4em 0 0.4em;
+  }
+
+  p,
+  ul,
+  ol,
+  blockquote {
+    margin: 0 0 1em;
+  }
+
+  ul {
+    list-style: square;
+    padding-left: 1.3em;
+  }
+
+  ol {
+    padding-left: 1.3em;
+  }
+
+  li {
+    margin-bottom: 0.35em;
+  }
+
+  blockquote {
+    border-left: 4px solid var(--crimson);
+    padding: 0.1em 0 0.1em 1em;
+    font-style: italic;
+  }
+
+  // The "Zdroje" list at the end of every event page.
+  h2:last-of-type + ul {
+    font-size: 0.85em;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.4;
+  text-decoration: none;
+  color: var(--crimson);
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  padding: 0.1em 0.7em;
+  margin: 0 6px 6px 0;
+
+  &:hover {
+    background: var(--crimson);
+    border-color: var(--crimson);
+    color: #fff;
+  }
+}
+
+.button {
+  display: inline-block;
+  background: var(--crimson);
+  color: #fff;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0.55em 1.1em;
+
+  &:hover {
+    background: #a50e2d;
+  }
+}
+
+.section-title {
+  font-size: 32px;
+  margin: 0 0 0.4em;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter: 20px;
+  }
+
+  body {
+    font-size: 17px;
+  }
+
+  .hero {
+    padding-top: 200px;
+    background:
+      linear-gradient(180deg, transparent 50px, #000 280px) left top / 100% 100%
+        no-repeat,
+      url("../images/president-milos-zeman.jpeg") 62% -30px / 900px auto no-repeat,
+      #000;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .prose h2 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,181 @@
+// Intro in the style of the original subtitle: big, bold, sans.
+.lead {
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.35;
+  color: #000;
+  margin: 0 0 24px;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 28px;
+  margin: 0 0 20px;
+  font-family: var(--sans);
+  color: var(--muted);
+
+  strong {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--crimson);
+    margin-right: 2px;
+  }
+}
+
+.topics {
+  font-family: var(--sans);
+  font-size: 15px;
+
+  p {
+    display: inline;
+    margin: 0;
+  }
+
+  > strong {
+    margin-right: 6px;
+  }
+}
+
+.years {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 16px 0 40px;
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: 18px;
+
+  a {
+    color: var(--muted);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--crimson);
+    }
+  }
+}
+
+// The original timeline: sticky year, month labels with a rule, grey line
+// with dots next to every event.
+.section {
+  margin-bottom: 24px;
+
+  > h2 {
+    position: sticky;
+    top: 60px;
+    margin: 0;
+    font-size: 2em;
+    color: dimgray;
+  }
+
+  > ul {
+    margin: 0 0 0 70px;
+    padding-left: 30px;
+    border-left: 2px solid var(--line);
+    list-style: none;
+
+    > li {
+      padding-bottom: 3em;
+
+      > p {
+        margin: -1.4em 0 1em;
+        font-family: var(--sans);
+        font-weight: 700;
+        color: dimgray;
+
+        &::after {
+          content: "";
+          display: block;
+          height: 2px;
+          background: var(--line);
+        }
+      }
+
+      > ul {
+        list-style: none;
+        padding: 0;
+
+        > li {
+          margin-bottom: 2em;
+
+          > p {
+            margin: 0 0 0.4em;
+          }
+        }
+
+        > li > h3 {
+          font-size: 1.5em;
+          margin: 0.83em 0 0.4em;
+
+          a {
+            color: var(--heading);
+            text-decoration: none;
+
+            &:hover {
+              color: var(--crimson);
+            }
+          }
+
+          &::before {
+            content: "";
+            display: inline-block;
+            position: relative;
+            width: 12px;
+            height: 12px;
+            background: var(--line);
+            left: -37px;
+            top: -4px;
+            margin-right: -12px;
+            border: 1px solid white;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.more {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--crimson);
+}
+
+.block {
+  margin-top: 64px;
+  padding-top: 20px;
+  border-top: 4px solid var(--crimson);
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0 32px;
+  margin: 24px 0 16px;
+  padding: 0;
+}
+
+@media (max-width: 767px) {
+  .lead {
+    font-size: 21px;
+  }
+
+  .section {
+    > h2 {
+      position: static;
+      margin-bottom: 1.2em;
+    }
+
+    > ul {
+      margin-left: 6px;
+      padding-left: 22px;
+
+      > li > ul > li > h3::before {
+        left: -29px;
+      }
+    }
+  }
+}
