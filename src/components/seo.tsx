@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
+import heroPhoto from "../images/president-milos-zeman.avif"
 
 type SeoProps = {
   /** Page title without the site name; omitted on the homepage. */
@@ -112,6 +113,17 @@ export const Seo = ({
       <meta name="twitter:title" content={title || HOME_TITLE} />
       <meta name="twitter:description" content={desc} />
       <meta name="twitter:image" content={imageUrl} />
+      {/* Every page's .hero shows this photo as a CSS background, and it is
+          the page's largest paint, so it is fetched at high priority with the
+          HTML. Browsers without AVIF skip this and take WebP or JPEG from
+          image-set(). React 18 only renders the lowercase attribute. */}
+      <link
+        rel="preload"
+        as="image"
+        href={heroPhoto}
+        type="image/avif"
+        {...{ fetchpriority: "high" }}
+      />
       {!noindex && (
         <script type="application/ld+json">
           {JSON.stringify({
