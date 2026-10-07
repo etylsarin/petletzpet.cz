@@ -67,6 +67,15 @@ img {
   padding: 0 var(--gutter);
 }
 
+// The header photo as AVIF or WebP, a fraction of the JPEG's size. Each
+// .hero background below starts with the JPEG for browsers without
+// image-set(), then swaps in this. The AVIF is also preloaded (see Seo).
+$hero-photo: image-set(
+  url("../images/president-milos-zeman.avif") type("image/avif"),
+  url("../images/president-milos-zeman.webp") type("image/webp"),
+  url("../images/president-milos-zeman.jpeg") type("image/jpeg")
+);
+
 // The Zeman photo fading into black behind every page's heading, as on the
 // original single-page site. The block grows with its content and stays black
 // below the fade, so long titles remain readable.
@@ -78,6 +87,9 @@ img {
       no-repeat,
     url("../images/president-milos-zeman.jpeg") center -100px / 1680px auto no-repeat,
     #000;
+  background-image:
+    linear-gradient(180deg, transparent 100px, #000 360px),
+    $hero-photo;
 }
 
 // Page heading on the dark part of the header photo.
@@ -211,6 +223,9 @@ img {
         no-repeat,
       url("../images/president-milos-zeman.jpeg") 62% -30px / 900px auto no-repeat,
       #000;
+    background-image:
+      linear-gradient(180deg, transparent 50px, #000 280px),
+      $hero-photo;
   }
 
   .hero-title {
